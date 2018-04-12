@@ -9,3 +9,7 @@ default: &default
 development:
   <<: *default
   database: retail_development
+
+production:
+  <<: *default
+  database: retail_production
