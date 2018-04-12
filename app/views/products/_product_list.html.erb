@@ -1,0 +1,22 @@
+<table class="table table-striped">
+	<thead>
+    <tr>
+	    <th>#</th>
+	    <th>Name</th>
+	    <th>Price</th>
+	    <th>Sale Tax</th>
+	    <th>Import Tax</th>
+    </tr>
+	</thead>
+	<tbody>
+		<% @products.each do |product| %>
+			<tr>
+			  <td><%= product.id %></td>
+			  <td><%= product.name %></td>
+			  <td><%= product.price %></td>
+			  <td><%= product.sale_tax %></td>
+			  <td><%= product.import_tax %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

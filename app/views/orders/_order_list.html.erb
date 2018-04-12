@@ -1,0 +1,26 @@
+<table class="table table-striped" id="order-table-total">
+	<thead>
+    <tr>
+	    <th>#</th>
+	    <th>Order Number</th>
+	    <th>Order Item</th>
+	    <th>Cost</th>
+	    <th>Sale Tax</th>
+	    <th>Import Tax</th>
+	    <th>Action</th>
+    </tr>
+	</thead>
+	<tbody>
+		<% @orders.map(&:order_items).flatten.each do |order_item| %>
+			<tr>
+			  <td><%= order_item.order.id %></td>
+			  <td><%= order_item.order.order_number %></td>
+			  <td><%= order_item.item_name %></td>
+			  <td><%= order_item.cost %></td>
+			  <td><%= order_item.sale_tax %></td>
+			  <td><%= order_item.import_tax %></td>
+			  <td><%= link_to "view" , order_path(order_item.order) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

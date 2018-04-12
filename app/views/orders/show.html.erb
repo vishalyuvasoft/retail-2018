@@ -1,0 +1,30 @@
+<div>
+	<h2 align="center">Retail</h2>
+	<h4 align="center"><%= "Order # #{@order.order_number}" %></h2>
+	<h4>Order Items:</h4>
+	<%= link_to "PDF" , "", class: "btn btn-primary float-right" %>
+	<table class="table table-striped" id="order-table-total" id="order-table-total">
+		<thead>
+	    <tr>
+		    <th>Order Item</th>
+		    <th>Cost</th>
+		    <th>Sale Tax</th>
+		    <th>Import Tax</th>
+	    </tr>
+		</thead>
+		<tbody>
+			<% @order.order_items.each do |order_item| %>
+				<tr>
+				  <td><%= order_item.item_name %></td>
+				  <td><%= order_item.cost %></td>
+				  <td><%= order_item.sale_tax %></td>
+				  <td><%= order_item.import_tax %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<!-- 
+<script type="text/javascript">
+	$("#order-table-total").tableTotal();
+</script> -->
