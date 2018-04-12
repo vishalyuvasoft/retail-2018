@@ -2,7 +2,6 @@
 	<h2 align="center">Retail</h2>
 	<h4 align="center"><%= "Order # #{@order.order_number}" %></h2>
 	<h4>Order Items:</h4>
-	<%= link_to "PDF" , order_path(@order, 'pdf'), class: "btn btn-primary float-right" %>
 	<table class="table table-striped" id="order-table-total" id="order-table-total">
 		<thead>
 	    <tr>
@@ -24,3 +23,12 @@
 		</tbody>
 	</table>
 </div>
+
+<style type="text/css">
+	table tr td {
+		border: 1px solid #ccc;
+	}
+	table {
+		width: 100%;
+	}
+</style>
