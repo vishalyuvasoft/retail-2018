@@ -23,6 +23,6 @@
 			<% end %>
 		</tbody>
 	</table>
-	<h4>Total Cost: <%= @order.cost_total %></h4>
-	<h4>Total Sale Tax: <%= @order.sale_tax_total %></h4>
+	<h4>Total Cost: <%= @order.cost_total.to_f %></h4>
+	<h4>Total Sale Tax: <%= @order.sale_tax_total.to_f %></h4>
 </div>

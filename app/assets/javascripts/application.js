@@ -17,5 +17,4 @@
 //= require popper
 //= require bootstrap
 //= require jquery_nested_form
-//= require jquery.tableTotal
 //= require_tree .
