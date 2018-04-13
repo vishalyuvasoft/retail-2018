@@ -3,10 +3,10 @@ class Order < ApplicationRecord
   accepts_nested_attributes_for :order_items, reject_if: :all_blank, allow_destroy: true
 
   def cost_total
-  	self.order_items.pluck(:cost).sum()
+  	self.order_items.pluck(:cost).sum().to_f
   end
 
   def sale_tax_total
-  	self.order_items.pluck(:sale_tax).sum()
+  	self.order_items.pluck(:sale_tax).sum().to_f
   end
 end
